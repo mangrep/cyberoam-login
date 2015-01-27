@@ -44,64 +44,32 @@ private void initComponents() {
     setBackground(new java.awt.Color(102, 102, 255));
     setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
     jLabel1.setText("Welcome to Cyberoam login client");
+    jLabel2.setText("User name");
+    jLabel3.setText("Password");
+    jButton1.setText("login");
+    jButton1.addActionListener(new java.awt.event.ActionListener() {
+    public void actionPerformed(java.awt.event.ActionEvent evt) {
+	try {
+		jButton1ActionPerformed(evt);
+	} catch ( Exception e) {
+		e.printStackTrace();
+		}
 
+         }
+    });
+   jButton2.setText("logout");
+   jButton2.addActionListener(new java.awt.event.ActionListener() {
+   	
+   public void actionPerformed(java.awt.event.ActionEvent evt) {
+	try{
+		jButton2ActionPerformed(evt);
+        }catch(Exception e){
+	        e.printStackTrace();
+	}
+	}
+   } );
 
-
-            jLabel2.setText("User name");
-
-
-
-            jLabel3.setText("Password");
-
-
-
-            jButton1.setText("login");
-
-            jButton1.addActionListener(new java.awt.event.ActionListener() {
-
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-
-                    try {
-
-						jButton1ActionPerformed(evt);
-
-					} catch ( Exception e) {
-
-						// TODO Auto-generated catch block
-
-						e.printStackTrace();
-
-					}
-
-                }
-
-            });
-
-            
-
-            jButton2.setText("logout");
-
-            jButton2.addActionListener(new java.awt.event.ActionListener() {
-
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-
-                	try{
-
-                	   jButton2ActionPerformed(evt);
-
-                   }catch(Exception e){
-
-                	   e.printStackTrace();
-
-                   }
-
-                }
-
-                } );
-
-
-
-            javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+	javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
 
             getContentPane().setLayout(layout);
 
