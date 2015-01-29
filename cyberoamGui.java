@@ -174,107 +174,46 @@ private void initComponents() {
         
 
         public void login() throws Exception,IOException{
-
         	String username = jTextField1.getText();
-
     		@SuppressWarnings("deprecation")
-
-			String passwd =  jTextField2.getText();
-
-    		
-
-    		//System.out.print("username "+username + "passwd "+passwd);
-
+		String passwd =  jTextField2.getText();
     		long a = System.currentTimeMillis();
-
     		String urlParameters = "mode=191&username="+username+"&password="+passwd+"&a="+a+"&producttype=0";
-
     		String request = "http://192.168.2.2:8090/login.xml";
-
     		URL url = new URL(request); 
-
     		HttpURLConnection connection = null;
-
+    		
     		try {
-
     			connection = (HttpURLConnection) url.openConnection();
-
-    			
-
     		} catch (IOException e1) {
-
-    			// TODO Auto-generated catch block
-
     			e1.printStackTrace();
-
     		}           
-
     		connection.setDoOutput(true);
-
     		connection.setDoInput(true);
-
     		connection.setInstanceFollowRedirects(false); 
-
     		try {
-
     			connection.setRequestMethod("POST");
-
-    			
-
     		} catch (ProtocolException e) {
-
-    			// TODO Auto-generated catch block
-
     			e.printStackTrace();
-
     		} 
-
-    		
-
     		connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded"); 
-
     		connection.setRequestProperty("Referer","http://192.168.2.2:8090/httpclient.html");
-
     		connection.setRequestProperty("Content-Length", "" + Integer.toString(urlParameters.getBytes().length));
-
     		connection.setUseCaches (false);
-
-
-
     		DataOutputStream wr = new DataOutputStream(connection.getOutputStream ());
-
     		wr.writeBytes(urlParameters);
-
     		BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-
-            String inputLine,ab=null;
-
-
-
-           while ((inputLine = in.readLine()) != null)
-
-        	   ab = ab + inputLine;
-
-           //System.out.println(ab);
-
-           int start = ab.indexOf("CDATA[");
-
-           int last = ab.indexOf("]]");
-
-           String message =(String) ab.subSequence(start+6, last);
-
-           System.out.println("message "+message);
-
-           in.close(); 
-
+        	String inputLine,ab=null;
+           	while ((inputLine = in.readLine()) != null)
+           		ab = ab + inputLine;
+           	int start = ab.indexOf("CDATA[");
+           	int last = ab.indexOf("]]");
+        	String message =(String) ab.subSequence(start+6, last);
+        	System.out.println("message "+message);
+        	in.close(); 
     		wr.flush();
-
     		wr.close();
-
     		jLabel4.setText(message);
-
-    		
-
         }
         
         void logout(){
