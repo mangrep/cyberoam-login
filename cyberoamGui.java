@@ -276,62 +276,34 @@ private void initComponents() {
     		
 
         }
-
         
-
-        
-
         void logout(){
-
         	System.out.print("Logout");
-
         	System.exit(0);
-
         }
-
         
-
         private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)  throws Exception,IOException {
-
-            // TODO add your handling code here:
-
         	String button_lable = null;
         	try{
-        	t.start();
+        		t.start();
         	}catch(Exception er){
         		System.out.println("Error : " + er);
         	}finally{
         		t.destroy();
         	}
-        	
-
         }
 
         public void run() {
-
-            //System.out.println("Inside run()function");
-
             try{
-
-            while(true){
-
-            	login();
-
-            	Thread.sleep(24000);
-
-            }	
-
-            }catch(Exception E){
-
-            	System.out.println(E);
-
-            	
-
+        	 while(true){
+            		login();
+            		Thread.sleep(24000);
+        	 }	
+             }catch(Exception E){
+            		System.out.println(E);
             }
-
          }
-
-        
+         
         private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         	logout();
         }
