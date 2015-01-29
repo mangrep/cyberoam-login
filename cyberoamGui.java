@@ -54,7 +54,6 @@ private void initComponents() {
 	} catch ( Exception e) {
 		e.printStackTrace();
 		}
-
          }
     });
    jButton2.setText("logout");
@@ -68,111 +67,58 @@ private void initComponents() {
 	}
 	}
    } );
-
 	javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-
             getContentPane().setLayout(layout);
-
             layout.setHorizontalGroup(
-
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-
                     .addGap(68, 68, 68)
-
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE))
-
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-
                     .addContainerGap()
-
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-
                                 .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
-
                                 .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
-
                             .addGap(49, 49, 49))
-
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
-
                 .addGroup(layout.createSequentialGroup()
-
                     .addContainerGap()
-
                     .addComponent(jButton1)
-
                     .addGap(18, 18, 18)
-
                     .addComponent(jButton2)
-
-                    .addContainerGap(239, Short.MAX_VALUE))
-
+                   .addContainerGap(239, Short.MAX_VALUE))
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-
                     .addContainerGap()
-
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 375, Short.MAX_VALUE))
-
             );
 
             layout.setVerticalGroup(
-
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-
                     .addGap(18, 18, 18)
-
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-
                     .addGap(18, 18, 18)
-
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-
                         .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-
                     .addGap(18, 18, 18)
-
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-
                         .addComponent(jButton1)
-
                         .addComponent(jButton2))
-
                     .addContainerGap())
-
             );
-
-
-
             pack();
-
-        }// </editor-fold>
-
+        }
         
-
         public void login() throws Exception,IOException{
         	String username = jTextField1.getText();
     		@SuppressWarnings("deprecation")
