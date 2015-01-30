@@ -48,25 +48,24 @@ private void initComponents() {
     jLabel3.setText("Password");
     jButton1.setText("login");
     jButton1.addActionListener(new java.awt.event.ActionListener() {
-    public void actionPerformed(java.awt.event.ActionEvent evt) {
-	try {
-		jButton1ActionPerformed(evt);
-	} catch ( Exception e) {
-		e.printStackTrace();
+    	public void actionPerformed(java.awt.event.ActionEvent evt) {
+		try {
+			jButton1ActionPerformed(evt);
+		} catch ( Exception e) {
+			e.printStackTrace();
 		}
-         }
+        }
     });
    jButton2.setText("logout");
    jButton2.addActionListener(new java.awt.event.ActionListener() {
-   	
-   public void actionPerformed(java.awt.event.ActionEvent evt) {
-	try{
-		jButton2ActionPerformed(evt);
-        }catch(Exception e){
-	        e.printStackTrace();
+   	public void actionPerformed(java.awt.event.ActionEvent evt) {
+		try{
+			jButton2ActionPerformed(evt);
+        	}catch(Exception e){
+	        	e.printStackTrace();
+		}
 	}
-	}
-   } );
+   });
 	javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
             getContentPane().setLayout(layout);
             layout.setHorizontalGroup(
