@@ -2,4 +2,4 @@
 This repository contains a file cyberoamGui.java .
 compile using javac
 
-i have assume cyberoam address as 192.168.2.2:8090. 
+I have assumed cyberoam address as 192.168.2.2:8090. 
