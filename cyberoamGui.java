@@ -16,11 +16,11 @@ import java.net.*;
 import java.util.Date;
 
 public class  cyberoamGui extends javax.swing.JFrame implements Runnable {
-	 Thread t;
+     Thread t;
      public cyberoamGui() {
         initComponents();
         t = new Thread(this, "Login Thread");
-    }
+     }
 /** 
  * This method is called from within the constructor to initialize the form.
  * WARNING: Do NOT modify this code. The content of this method is
